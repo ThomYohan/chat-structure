@@ -1,11 +1,12 @@
 import React from 'react'
 
 
-const Messages = (props) => {
+function Messages(props) {
 
     const { messages, user, typingUsers } = props
 
 
+    //weird error
     scrollDown() {
         const { container } = this.refs
         container.scrollTop = container.scrollHeight
@@ -55,3 +56,5 @@ const Messages = (props) => {
         </div>
     )
 }
+
+export default Messages

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MessageInput = (props) => {
+function MessageInput(props) {
 
     const [message, setMessage] = useState()
 
@@ -45,3 +45,5 @@ const MessageInput = (props) => {
         }
     }
 }
+
+// export defualt MessageInput

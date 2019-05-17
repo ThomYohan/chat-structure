@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import io from 'socket.io-client'
 import { USER_CONNECTED, LOGOUT } from '../Events'
 import ChatContainer from './chats/ChatContainer'
 
 const socketUrl = "http://localhost:3231"
 
-const Layout = (props) => {
+function Layout(props) {
 
     const [user, setUser] = useState(null)
     const [socket, setSocket] = useState(null)
@@ -15,13 +15,14 @@ const Layout = (props) => {
     })
 
     initSocket = () => {
+
         const socket = io(socketUrl)
 
         socket.on('connect', () => {
             console.log("Connected")
         })
+        useState([setSocket]) 
 
-        useState([socket]) 
     }
 
     setUser = (user) => {
@@ -45,3 +46,5 @@ const Layout = (props) => {
 			</div>
     )
 }
+
+export default Layout

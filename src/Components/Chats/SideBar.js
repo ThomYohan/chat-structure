@@ -4,7 +4,7 @@ import FAMenu from 'react-icons/lib/fa/list-ul'
 import FASearch from 'react-icons/lib/fa/search'
 import MdEject from 'react-icons/lib/md/eject'
 
-const SideBar = (props) => {
+function SideBar(props) {
 
 
 
@@ -67,3 +67,5 @@ const SideBar = (props) => {
 		);
     
 }
+
+export default SideBar

@@ -7,7 +7,7 @@ import MessageInput from '../Messages/MessageInput'
 import { SSL_OP_MSIE_SSLV2_RSA_PADDING } from 'constants';
 
 
-const ChatContainer = (props) => {
+function ChatContainer(props) {
 
     const { user, logout } = props
     const [activeChats, activeChat] = useState({activeChats})
@@ -125,3 +125,5 @@ const ChatContainer = (props) => {
         </>
     )
 }
+
+export default ChatContainer
